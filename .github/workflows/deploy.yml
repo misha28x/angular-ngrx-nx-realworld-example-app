@@ -1,4 +1,4 @@
-namme: deploy
+name: deploy
 on: [push]
 jobs:
   eslint:
