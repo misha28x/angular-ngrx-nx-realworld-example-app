@@ -16,7 +16,6 @@ jobs:
       run: npm install
     - name: Run eslint
       run: npm run lint
-
     prettier:
       name: Prettier
       runs-on: ububtu-latest
