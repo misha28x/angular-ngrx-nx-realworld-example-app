@@ -19,4 +19,22 @@ jobs:
         run: npm install
       - name: Run eslint
         run: npm run lint
+    prettier:
+      name: Prettier
+      runs-on: ububtu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Install NVM
+          run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+        - name: Install node.js
+          env:
+            NODE_VERSION: 16.14.2
+              - name: Install Node.js
+          env:
+            NODE_VERSION: 14.17.0
+          run: export NVM_DIR="$HOME/.nvm" && . "$NVM_DIR/nvm.sh" --no-use && nvm install
+        - name: Install dependencies
+          run: npm install
+        - name: Run Prettier
+          run: npm run prettier
 ~
